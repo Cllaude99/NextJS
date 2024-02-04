@@ -1,5 +1,1 @@
 # NextJS
-
-### NextJS Study
-
-### TEST
