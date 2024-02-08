@@ -1,14 +1,15 @@
 import axios from 'axios';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Home',
 };
 
-const URL = `https://nomad-movies.nomadcoders.workers.dev/movies`;
+export const API_URL = `https://nomad-movies.nomadcoders.workers.dev/movies`;
 
 async function getMovies() {
-  const { data: movies } = await axios.get(URL);
+  const { data: movies } = await axios.get(API_URL);
   return movies;
 }
 
@@ -17,7 +18,11 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>{JSON.stringify(movies)}</h1>
+      {movies.map((movie: any) => (
+        <li key={movie.id}>
+          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+        </li>
+      ))}
     </div>
   );
 }
