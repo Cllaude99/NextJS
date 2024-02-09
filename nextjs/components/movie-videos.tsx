@@ -2,7 +2,7 @@ import styles from '../app/styles/movie-video.module.css';
 import { API_URL } from '@/app/(home)/page';
 import axios from 'axios';
 
-async function getVideos(id: string) {
+export async function getVideos(id: string) {
   const { data } = await axios.get(`${API_URL}/${id}/videos`);
   return data;
 }
