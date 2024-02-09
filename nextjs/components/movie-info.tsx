@@ -1,6 +1,6 @@
-import { API_URL } from '@/app/(home)/page';
 import axios from 'axios';
 import styles from '../app/styles/movie-info.module.css';
+import { API_URL } from '@/app/constant';
 
 export async function getMovie(id: string) {
   const { data } = await axios.get(`${API_URL}/${id}`);

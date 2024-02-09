@@ -1,5 +1,5 @@
+import { API_URL } from '@/app/constant';
 import styles from '../app/styles/movie-video.module.css';
-import { API_URL } from '@/app/(home)/page';
 import axios from 'axios';
 
 export async function getVideos(id: string) {

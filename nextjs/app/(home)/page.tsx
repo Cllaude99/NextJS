@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 import styles from '../styles/home.module.css';
 import axios from 'axios';
 import Movie from '@/components/movie';
+import { API_URL } from '../constant';
 
 export const metadata: Metadata = {
   title: 'Home',
 };
-
-export const API_URL = `https://nomad-movies.nomadcoders.workers.dev/movies`;
 
 async function getMovies() {
   const { data: movies } = await axios.get(API_URL);
