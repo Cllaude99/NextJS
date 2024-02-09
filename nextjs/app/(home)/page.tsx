@@ -1,7 +1,6 @@
-import axios from 'axios';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import styles from '../styles/home.module.css';
+import axios from 'axios';
 import Movie from '@/components/movie';
 
 export const metadata: Metadata = {
